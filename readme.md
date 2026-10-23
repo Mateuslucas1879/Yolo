@@ -6,7 +6,7 @@ Welcome to the documentation repository for **Autonomous Aerial Robotic Systems*
 
 ## 📌 Table of Contents
 1. [Overview](#overview)
-2. [Flight Dynamics & Kinematics (6 DoF)](#flight-dynamics--kinematics-6-dof)
+2. [Flight Dynamics & Kinematics (6 DoF)](#flight-dynamics--kinematics-6-dof)"
 3. [Perception & Sensor Suite](#perception--sensor-suite)
 4. [Simultaneous Localization and Mapping (SLAM)](#simultaneous-localization-and-mapping-slam)
 5. [Autonomous Exploration Strategies](#autonomous-exploration-strategies)
