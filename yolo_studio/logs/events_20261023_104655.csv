@@ -1,0 +1,11 @@
+timestamp,evento,zona,track_id,classe,confianca,detalhe
+2026-10-23T10:46:55.717,start,,,,,0
+2026-10-23T10:47:08.455,model_loaded,,,,,yolo11m.pt
+2026-10-23T10:47:16.322,stop,,,,,
+2026-10-23T10:47:16.432,start,,,,,0
+2026-10-23T10:47:25.170,new_track,,1,person,0.757,
+2026-10-23T10:47:53.186,new_track,,2,cell phone,0.792,
+2026-10-23T10:48:42.552,stop,,,,,
+2026-10-23T10:52:03.522,start,,,,,0
+2026-10-23T10:52:06.439,new_track,,1,person,0.817,
+2026-10-23T10:52:40.619,stop,,,,,

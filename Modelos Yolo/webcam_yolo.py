@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 # 1. Carrega o modelo pré-treinado (usaremos a versão nano 'n', que é super rápida para webcam)
-model = YOLO("yolo11n.pt")
+model = YOLO("recordings/yolo11n.pt")
 
 # 2. Inicializa a webcam (0 geralmente é a webcam padrão do computador)
 cap = cv2.VideoCapture(0)

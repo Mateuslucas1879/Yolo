@@ -13,7 +13,7 @@ class YOLOApp:
         self.window.config(bg="#1e1e1e")
 
         # 1. Carrega o modelo YOLO
-        self.model = YOLO("yolo11n.pt")
+        self.model = YOLO("recordings/yolo11n.pt")
 
         # Variáveis de controle da webcam
         self.cap = None

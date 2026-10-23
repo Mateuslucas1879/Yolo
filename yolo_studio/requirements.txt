@@ -1,0 +1,6 @@
+ultralytics>=8.3.0
+opencv-python>=4.8
+pillow>=10.0
+numpy>=1.24
+pyyaml>=6.0
+# PyTorch com CUDA: instale conforme sua GPU em https://pytorch.org/get-started/locally/

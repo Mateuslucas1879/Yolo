@@ -1,0 +1,51 @@
+# ============================================================
+# YOLO Studio - configuração
+# Altere aqui em vez de mexer no código.
+# ============================================================
+
+# Fonte de vídeo: número da câmera (0, 1, ...) OU caminho de um vídeo
+# (ex.: "videos/teste.mp4"). Vídeos são processados quadro a quadro,
+# sem descartar nenhum, o que permite comparar modelos de forma reproduzível.
+source: 0
+frame_width: 1280
+frame_height: 720
+
+# Modelos disponíveis no menu da interface (baixados automaticamente na 1ª vez).
+# Como a prioridade é precisão, o padrão é um modelo maior que o "nano".
+models:
+  - yolo11m.pt
+  - yolo11l.pt
+  - yolo11x.pt
+  - yolo11m-pose.pt
+default_model: yolo11m.pt
+
+# Inferência
+imgsz: 960          # maior = melhor para objetos pequenos, porém mais lento
+conf: 0.5           # confiança mínima inicial
+iou: 0.5            # limiar de NMS inicial
+device: auto        # auto | cpu | cuda:0
+half: true          # FP16 (só é aplicado se estiver em GPU CUDA)
+
+# Rastreamento (IDs persistentes por objeto/pessoa)
+tracking: true
+tracker: bytetrack.yaml    # ou botsort.yaml
+
+# Presets do filtro de classes (IDs do COCO). null = todas as classes.
+# 0 = pessoa, 24 = mochila, 26 = bolsa, 39 = garrafa, 41 = copo, 67 = celular
+class_presets:
+  Todas: null
+  Pessoas: [0]
+  Pessoas + mochilas/bolsas: [0, 24, 26]
+
+# Zonas
+zones_file: zones.json
+zone_exit_grace_frames: 8   # quadros sem ver o ID dentro da zona antes de registrar "saída"
+
+# Robustez: se a câmera ficar este tempo sem entregar imagem, avisa "SEM IMAGEM"
+stale_timeout_s: 2.0
+
+# Logs e saídas
+log_new_tracks: true        # registra no CSV cada novo ID que aparece
+logs_dir: logs
+recordings_dir: recordings
+snapshots_dir: snapshots
